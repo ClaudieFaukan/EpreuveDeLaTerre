@@ -1,19 +1,13 @@
 <?php
 
-use function PHPSTORM_META\type;
 
 //verifie si argument passer ou non, etablie par defaut une valeur null
-if (count($argv) <= 1) {
-    $argv[1] = null;
+if (count($argv) <= 1 || !is_numeric($argv[1]) || is_string($argv[1])) {
+    echo "Tu ne me la mettras pas à l’envers.";
+    die();
 }
-
-$argument = $argv[1];
+$argument = floatval($argv[1]);
 $result = "";
-
-//check si nemurique
-if (!is_numeric($argument)) {
-    $result = "Tu ne me la mettras pas à l’envers.";
-}
 
 //check si pair
 if ($argument % 2 == 0) {
