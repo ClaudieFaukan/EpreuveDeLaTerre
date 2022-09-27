@@ -1,5 +1,8 @@
 <?php
 
-foreach ($argv as $arg) {
-    echo ("$arg \n");
+foreach ($argv as $arg => $val) {
+    if ($arg != 0) {
+
+        echo ("$val \n");
+    }
 }
