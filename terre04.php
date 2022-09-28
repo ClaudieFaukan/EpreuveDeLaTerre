@@ -1,7 +1,7 @@
 <?php
 
 
-//verifie si argument passer ou non, etablie par defaut une valeur null
+//verifie si argument passer ou non
 if (count($argv) <= 1 || !is_numeric($argv[1]) || is_string($argv[1])) {
     echo "Tu ne me la mettras pas à l’envers.";
     die();
