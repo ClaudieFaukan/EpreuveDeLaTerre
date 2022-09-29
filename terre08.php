@@ -1,10 +1,11 @@
 <?php
 
-if (count($argv) != 2 || !is_numeric($argv[1]) || $argv[1] < 0 || !is_float($argv[1])) {
-    echo "Erreur. saisir un nombre entier uniqument\n";
+if (count($argv) != 3 || !is_numeric($argv[1]) || !is_numeric($argv[2]) || $argv[1] <= 0 || $argv[2] <= 0) {
+    echo "Erreur. veuillez saisir un nombre et un exposant non negatif exemple \" 4 2 \" .\n";
     die();
 } else {
-    $argument = floatval($argv[1]);
+    $valeur = abs(floatval($argv[1]));
+    $exposant = abs(floatval($argv[1]));
 }
 
-echo (sqrt($argument));
+echo (pow($valeur, $exposant));

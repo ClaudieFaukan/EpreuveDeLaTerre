@@ -1,11 +1,10 @@
 <?php
 
-if (count($argv) != 3 || !is_numeric($argv[1]) || !is_numeric($argv[2]) || $argv[1] < 0 || $argv[2] < 0) {
-    echo "Erreur. veuillez saisir un nombre et un exposant non negatif exemple \" 4 2 \" .\n";
+if (count($argv) != 2 || is_numeric($argv[1]) || !is_string($argv[1])) {
+    echo "Erreur.\n";
     die();
 } else {
-    $valeur = abs(floatval($argv[1]));
-    $exposant = abs(floatval($argv[1]));
+    $argument = strval($argv[1]);
 }
 
-echo (pow($valeur, $exposant));
+echo strlen($argument);
